@@ -10,4 +10,4 @@ The files you may edit to adapt the validation are as follows:
 
 To publish changes commit and push your updates. In 1-2 minutes the online service will be updated.
 
-The online service is accessible at https://www.itb.ec.europa.eu/espd/upload.
+The online service is accessible at https://www.itb.ec.europa.eu/espd/upload and the web service API at https://www.itb.ec.europa.eu/espd/api.
