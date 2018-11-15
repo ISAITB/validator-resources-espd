@@ -5531,7 +5531,7 @@
             <SimpleValue>CRITERION.OTHER.CA_DATA.LOTS_SUBMISSION</SimpleValue>
          </Value>
          <Value ColumnRef="context">
-            <SimpleValue>REGULATED</SimpleValue>
+            <SimpleValue>SELF-CONTAINED</SimpleValue>
          </Value>
          <Value ColumnRef="status">
             <SimpleValue>ACTIVE</SimpleValue>

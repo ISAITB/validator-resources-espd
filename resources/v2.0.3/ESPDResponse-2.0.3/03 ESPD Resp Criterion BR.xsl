@@ -361,6 +361,42 @@
 
 		    <!--ASSERT -->
 <xsl:choose>
+         <xsl:when test="( ($currentDataType = 'CODE_BOOLEAN') and (cac:ResponseValue/cbc:ResponseCode) ) or not($currentDataType = 'CODE_BOOLEAN')"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="( ($currentDataType = 'CODE_BOOLEAN') and (cac:ResponseValue/cbc:ResponseCode) ) or not($currentDataType = 'CODE_BOOLEAN')">
+               <xsl:attribute name="id">BR-TCR-08-26</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>The type of answer expected by the contracting authority is 'CODE_BOOLEAN' ('cac:ResponseValue/cbc:ResponseCode' element) - ('cbc:ID' is <xsl:text/>
+                  <xsl:value-of select="cbc:ID"/>
+                  <xsl:text/>).</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+
+		    <!--ASSERT -->
+<xsl:choose>
+         <xsl:when test="( ($currentDataType = 'ECONOMIC_OPERATOR_ROLE_CODE') and (cac:ResponseValue/cbc:ResponseCode) ) or not($currentDataType = 'ECONOMIC_OPERATOR_ROLE_CODE')"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="( ($currentDataType = 'ECONOMIC_OPERATOR_ROLE_CODE') and (cac:ResponseValue/cbc:ResponseCode) ) or not($currentDataType = 'ECONOMIC_OPERATOR_ROLE_CODE')">
+               <xsl:attribute name="id">BR-TCR-08-27</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>The type of answer expected by the contracting authority is 'ECONOMIC_OPERATOR_ROLE_CODE' ('cac:ResponseValue/cbc:ResponseCode' element) - ('cbc:ID' is <xsl:text/>
+                  <xsl:value-of select="cbc:ID"/>
+                  <xsl:text/>).</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+
+		    <!--ASSERT -->
+<xsl:choose>
          <xsl:when test="( ($currentDataType = 'DATE') and (cac:ResponseValue/cbc:ResponseDate) ) or not($currentDataType = 'DATE')"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"

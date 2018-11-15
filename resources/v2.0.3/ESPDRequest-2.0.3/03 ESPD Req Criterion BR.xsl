@@ -239,6 +239,24 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
+      <xsl:variable name="alpha_Selection"
+                    select="cac:TenderingCriterion[cbc:CriterionTypeCode = 'CRITERION.SELECTION.ALL']"/>
+
+		    <!--ASSERT -->
+<xsl:choose>
+         <xsl:when test="((count($alpha_Selection)=1) and (count($current_Selection) &lt; 2)) or (count($alpha_Selection)=0)"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="((count($alpha_Selection)=1) and (count($current_Selection) &lt; 2)) or (count($alpha_Selection)=0)">
+               <xsl:attribute name="id">BR-REQ-41</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>Alpha criteria is provided (cbc:CriterionTypeCode = 'CRITERION.SELECTION.ALL'), the other selection criteria cannot be included.</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
       <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
    <xsl:template match="text()" priority="-1" mode="M5"/>
