@@ -190,23 +190,21 @@
 <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">Common Code lists Values Restrictions</svrl:text>
 
    <!--PATTERN BR-COM-CL-RESTR-->
-<xsl:variable name="selfcontained"
-                 select="if (/*[1]/cbc:QualificationApplicationTypeCode = 'SELFCONTAINED') then 'SELF-CONTAINED' else 'REGULATED'"/>
-   <xsl:variable name="extended"
-                 select="if (/*[1]/cbc:QualificationApplicationTypeCode = 'EXTENDED') then 'EXTENDED' else 'BASIC'"/>
+<xsl:variable name="extended"
+                 select="if (upper-case(/*[1]/cbc:QualificationApplicationTypeCode) = 'EXTENDED' or upper-case(/*[1]/cbc:QualificationApplicationTypeCode) = 'SELFCONTAINED') then 'EXTENDED' else 'BASIC'"/>
 
 	  <!--RULE -->
 <xsl:template match="cbc:ValueDataTypeCode" priority="1007" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/ResponseDataType-CodeList.gc')//SimpleCodeList"/>
+                    select="document('../gc/ResponseDataType-CodeList.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or                  (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))"/>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or                  (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))">
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
                <xsl:attribute name="id">BR-COM-CL-RESTR-01.01</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
@@ -226,15 +224,15 @@
 	  <!--RULE -->
 <xsl:template match="cbc:WeightingTypeCode" priority="1006" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/WeightingType-CodeList.gc')//SimpleCodeList"/>
+                    select="document('../gc/WeightingType-CodeList.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or                  (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))"/>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or                  (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))">
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
                <xsl:attribute name="id">BR-COM-CL-RESTR-01.02</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
@@ -255,15 +253,15 @@
 <xsl:template match="cac:TenderingCriterion/cbc:EvaluationMethodTypeCode" priority="1005"
                  mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/EvaluationMethodType-CodeList.gc')//SimpleCodeList"/>
+                    select="document('../gc/EvaluationMethodType-CodeList.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))"/>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))">
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
                <xsl:attribute name="id">BR-COM-CL-RESTR-01.03</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
@@ -283,15 +281,15 @@
 	  <!--RULE -->
 <xsl:template match="cbc:CriterionTypeCode" priority="1004" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/ESPD-CriteriaTaxonomy_V2.1.1.gc')//SimpleCodeList"/>
+                    select="document('../gc/ESPD-CriteriaTaxonomy_V2.1.1.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))"/>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))">
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
                <xsl:attribute name="id">BR-COM-CL-RESTR-01.04</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
@@ -311,15 +309,15 @@
 	  <!--RULE -->
 <xsl:template match="cbc:BooleanGUIControlType" priority="1003" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/BooleanGUIControlType-CodeList.gc')//SimpleCodeList"/>
+                    select="document('../gc/BooleanGUIControlType-CodeList.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))"/>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))">
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
                <xsl:attribute name="id">BR-COM-CL-RESTR-01.05</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
@@ -339,15 +337,15 @@
 	  <!--RULE -->
 <xsl:template match="cbc:CPVCodes" priority="1002" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/CPVCodes-CodeList.gc')//SimpleCodeList"/>
+                    select="document('../gc/CPVCodes-CodeList.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))"/>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and (contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $selfcontained) or contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended))))">
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
                <xsl:attribute name="id">BR-COM-CL-RESTR-01.06</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
@@ -369,7 +367,7 @@
                  priority="1001"
                  mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/EORoleType-CodeList.gc')//SimpleCodeList"/>
+                    select="document('../gc/EORoleType-CodeList.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
@@ -397,7 +395,7 @@
 	  <!--RULE -->
 <xsl:template match="cbc:QualificationApplicationTypeCode" priority="1000" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/QualificationApplicationType-CodeList.gc')//SimpleCodeList"/>
+                    select="document('../gc/QualificationApplicationType-CodeList.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
