@@ -196,7 +196,7 @@
 	  <!--RULE -->
 <xsl:template match="cbc:ValueDataTypeCode" priority="1007" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/ResponseDataType.gc')//SimpleCodeList"/>
+                    select="document('../gc/ResponseDataType.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
@@ -224,7 +224,7 @@
 	  <!--RULE -->
 <xsl:template match="cbc:WeightingTypeCode" priority="1006" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/WeightingType.gc')//SimpleCodeList"/>
+                    select="document('../gc/WeightingType.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
@@ -253,7 +253,7 @@
 <xsl:template match="cac:TenderingCriterion/cbc:EvaluationMethodTypeCode" priority="1005"
                  mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/EvaluationMethodType.gc')//SimpleCodeList"/>
+                    select="document('../gc/EvaluationMethodType.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
@@ -281,7 +281,7 @@
 	  <!--RULE -->
 <xsl:template match="cbc:CriterionTypeCode" priority="1004" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/ESPD-CriteriaTaxonomy_V2.1.1.gc')//SimpleCodeList"/>
+                    select="document('../gc/ESPD-CriteriaTaxonomy_V2.1.1.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
@@ -309,7 +309,7 @@
 	  <!--RULE -->
 <xsl:template match="cbc:BooleanGUIControlType" priority="1003" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/BooleanGUIControlType.gc')//SimpleCodeList"/>
+                    select="document('../gc/BooleanGUIControlType.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
@@ -336,7 +336,7 @@
 
 	  <!--RULE -->
 <xsl:template match="cbc:CPVCodes" priority="1002" mode="M3">
-      <xsl:variable name="gc" select="document('../../../../cl/gc/CPVCodes.gc')//SimpleCodeList"/>
+      <xsl:variable name="gc" select="document('../gc/CPVCodes.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
@@ -365,7 +365,7 @@
 <xsl:template match="cac:EconomicOperatorParty/cac:EconomicOperatorRole/cbc:RoleCode"
                  priority="1001"
                  mode="M3">
-      <xsl:variable name="gc" select="document('../../../../cl/gc/EORoleType.gc')//SimpleCodeList"/>
+      <xsl:variable name="gc" select="document('../gc/EORoleType.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
@@ -393,7 +393,7 @@
 	  <!--RULE -->
 <xsl:template match="cbc:QualificationApplicationTypeCode" priority="1000" mode="M3">
       <xsl:variable name="gc"
-                    select="document('../../../../cl/gc/QualificationApplicationType.gc')//SimpleCodeList"/>
+                    select="document('../gc/QualificationApplicationType.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
