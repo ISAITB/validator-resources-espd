@@ -447,7 +447,7 @@
                   <xsl:value-of select="name(ancestor::*[1])"/>
                   <xsl:text/>/<xsl:text/>
                   <xsl:value-of select="name()"/>
-                  <xsl:text/>' must have the following attribute and value: 'listAgencyName = ISO'.</svrl:text>
+                  <xsl:text/>' must have the following attribute and value: 'listAgencyName = DG GROW (European Commission)'.</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
@@ -468,7 +468,7 @@
                   <xsl:value-of select="name(ancestor::*[1])"/>
                   <xsl:text/>/<xsl:text/>
                   <xsl:value-of select="name()"/>
-                  <xsl:text/>' must have the following attribute and value: 'listAgencyID = ISO'.</svrl:text>
+                  <xsl:text/>' must have the following attribute and value: 'listAgencyID = EU-COM-GROW'.</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
