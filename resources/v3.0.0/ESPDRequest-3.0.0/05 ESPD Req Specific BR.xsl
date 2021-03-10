@@ -224,18 +224,14 @@
    </xsl:template>
 
 	  <!--RULE -->
-<xsl:template match="cac:TenderingCriterionPropertyGroup/cac:TenderingCriterionProperty[cbc:TypeCode = 'REQUIREMENT']"
-                 priority="1000"
-                 mode="M7">
+<xsl:template match="espd:QualificationApplicationRequest" priority="1000" mode="M7">
       <xsl:variable name="URLCriterionList" select="./xls/criterionList.xml"/>
       <xsl:variable name="docCriterionList" select="document($URLCriterionList)"/>
       <xsl:variable name="currentSelection"
                     select="cac:TenderingCriterion[contains(cbc:CriterionTypeCode, $docCriterionList//selection-criterion/name)]"/>
       <xsl:variable name="allLots" select="/*[1]/cac:ProcurementProjectLotReference/cbc:ID"/>
-      <xsl:variable name="testLots" select="(cbc:ExpectedID) and count($allLots) &gt; 0"/>
-      <xsl:variable name="currentExpectedID" select="cbc:ExpectedID"/>
-      <xsl:variable name="lotsIDs"
-                    select="/*[1]/cac:ProcurementProjectLotReference[cbc:ID = $currentExpectedID]/cbc:ID"/>
+      <xsl:variable name="testLots" select="count($allLots) &gt; 0"/>
+      <xsl:variable name="lotsIDs" select="/*[1]/cac:ProcurementProjectLotReference/cbc:ID"/>
 
 		    <!--ASSERT fatal-->
 <xsl:choose>
@@ -248,11 +244,7 @@
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
                </xsl:attribute>
-               <svrl:text>The lots each criteria applies to MUST be provided. The lot
-				identifier '/cbc:ExpectedID = <xsl:text/>
-                  <xsl:value-of select="cbc:ExpectedID"/>
-                  <xsl:text/>' does not
-				exist.</svrl:text>
+               <svrl:text>The lots each criteria applies to MUST be provided.</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>

@@ -433,10 +433,10 @@
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(false() or not(@listAgencyName != 'ISO'))"/>
+         <xsl:when test="(false() or not(@listAgencyName != 'DG GROW (European Commission)'))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(false() or not(@listAgencyName != 'ISO'))">
+                                test="(false() or not(@listAgencyName != 'DG GROW (European Commission)'))">
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
@@ -454,10 +454,10 @@
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(false() or not(@listAgencyID != 'ISO'))"/>
+         <xsl:when test="(false() or not(@listAgencyID != 'EU-COM-GROW'))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(false() or not(@listAgencyID != 'ISO'))">
+                                test="(false() or not(@listAgencyID != 'EU-COM-GROW'))">
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
