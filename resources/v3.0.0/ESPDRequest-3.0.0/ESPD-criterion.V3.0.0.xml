@@ -17,7 +17,7 @@
         <cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC">2.3</cbc:UBLVersionID>
         <!-- How ESPD-EDM-V3.0.0 uses the
 		UBL-2.3 schemas whilst keeping conformance -->
-        <cbc:CustomizationID schemeAgencyID="CEN-BII" schemeVersionID="3.0">urn:www.cenbii.eu:transaction:biitrdm092:ver3.0</cbc:CustomizationID>
+        <cbc:CustomizationID schemeAgencyID="CEN-BII" schemeVersionID="3.0">urn:www.cenbii.eu:transaction:biitrdm070:ver3.0</cbc:CustomizationID>
         <!-- The transactional profile where
 		the ESPD is used. ESPD-EDM-V3.0.0 refers to the CEN profile -->
         <cbc:ProfileID schemeAgencyID="CEN-BII" schemeVersionID="2.0">4.1</cbc:ProfileID>
