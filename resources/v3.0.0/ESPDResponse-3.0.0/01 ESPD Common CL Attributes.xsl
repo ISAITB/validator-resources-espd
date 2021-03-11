@@ -433,10 +433,10 @@
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(false() or not(@listAgencyName != 'ISO'))"/>
+         <xsl:when test="(false() or not(@listAgencyName != 'DG GROW (European Commission)'))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(false() or not(@listAgencyName != 'ISO'))">
+                                test="(false() or not(@listAgencyName != 'DG GROW (European Commission)'))">
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
@@ -447,17 +447,17 @@
                   <xsl:value-of select="name(ancestor::*[1])"/>
                   <xsl:text/>/<xsl:text/>
                   <xsl:value-of select="name()"/>
-                  <xsl:text/>' must have the following attribute and value: 'listAgencyName = ISO'.</svrl:text>
+                  <xsl:text/>' must have the following attribute and value: 'listAgencyName = DG GROW (European Commission)'.</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(false() or not(@listAgencyID != 'ISO'))"/>
+         <xsl:when test="(false() or not(@listAgencyID != 'EU-COM-GROW'))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(false() or not(@listAgencyID != 'ISO'))">
+                                test="(false() or not(@listAgencyID != 'EU-COM-GROW'))">
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
@@ -468,7 +468,7 @@
                   <xsl:value-of select="name(ancestor::*[1])"/>
                   <xsl:text/>/<xsl:text/>
                   <xsl:value-of select="name()"/>
-                  <xsl:text/>' must have the following attribute and value: 'listAgencyID = ISO'.</svrl:text>
+                  <xsl:text/>' must have the following attribute and value: 'listAgencyID = EU-COM-GROW'.</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
