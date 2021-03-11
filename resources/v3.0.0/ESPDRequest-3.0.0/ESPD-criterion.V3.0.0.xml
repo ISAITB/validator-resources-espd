@@ -48,7 +48,7 @@
                 <cbc:BuyerProfileURI>DummyValue</cbc:BuyerProfileURI>
                 <cac:Party>
                         <cbc:WebsiteURI>DummyValue</cbc:WebsiteURI>
-                        <cbc:EndpointID schemeAgencyID="EU-COM-GROW">DummyValue</cbc:EndpointID>
+                        <cbc:EndpointID schemeAgencyID="EU-COM-GROW">AD123456789</cbc:EndpointID>
                         <cac:PartyIdentification>
                                 <cbc:ID schemeAgencyID="VIES">B82387770</cbc:ID>
                         </cac:PartyIdentification>
@@ -60,7 +60,7 @@
                                 <cbc:CityName>DummyValue</cbc:CityName>
                                 <cbc:PostalZone>DummyValue</cbc:PostalZone>
                                 <cac:Country>
-                                        <cbc:IdentificationCode listID="country" listAgencyID="EU-COM-OP" listVersionID="20201216-0">asdasdas</cbc:IdentificationCode>
+                                        <cbc:IdentificationCode listID="country" listAgencyID="EU-COM-GROW" listVersionID="20201216-0">AND</cbc:IdentificationCode>
                                 </cac:Country>
                         </cac:PostalAddress>
                         <cac:Contact>
@@ -2527,9 +2527,10 @@
                 <cbc:Name>Enrolment in a relevant professional register</cbc:Name>
                 <cbc:Description>It is enrolled in relevant professional registers kept in the Member State of its establishment as described in Annex XI of Directive 2014/24/EU; economic operators from certain Member States may have to comply with other requirements set out in that Annex.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -2678,30 +2679,30 @@
         </cac:TenderingCriterion>
         <!-- Criterion:Enrolment in a trade register -->
         <cac:TenderingCriterion>
-                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">87b3fa26-3549-4f92-b8e0-3fd8f04bf5c7</cbc:ID>
+                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">87b3fa26-3549-4f92-b8e0-3fd8f04bf5c7</cbc:ID>
                 <cbc:CriterionTypeCode listID="criterion" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">trade-regist</cbc:CriterionTypeCode>
                 <cbc:Name>Enrolment in a trade register</cbc:Name>
                 <cbc:Description>It is enrolled in trade registers kept in the Member State of its establishment as described in Annex XI of Directive 2014/24/EU; economic operators from certain Member States may have to comply with other requirements set out in that Annex.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
 			LOT-00000
 		</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
                         <cbc:Name>[Name of the National Criterion]</cbc:Name>
                         <cbc:Description>[Description of the National Criterion ]</cbc:Description>
                         <cac:TenderingCriterionPropertyGroup>
-                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">8c39b505-8abe-44fa-a3e0-f2d78b9d8224</cbc:ID>
+                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">8c39b505-8abe-44fa-a3e0-f2d78b9d8224</cbc:ID>
                                 <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ON*</cbc:PropertyGroupTypeCode>
                                 <cac:TenderingCriterionProperty>
-                                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">15577404-1a4d-4dbb-9c02-80e6e306a852</cbc:ID>
+                                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">fc212ee7-c8ca-4fe2-ade6-6397c884177f</cbc:ID>
                                         <cbc:Description>[Additional information; e.g. no evidences online]</cbc:Description>
                                         <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">CAPTION</cbc:TypeCode>
                                         <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">NONE</cbc:ValueDataTypeCode>
                                 </cac:TenderingCriterionProperty>
                                 <cac:TenderingCriterionProperty>
-                                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">f2f402ce-677a-4042-b933-2625a3c82ae0</cbc:ID>
+                                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">32c0af54-64fb-48ae-be31-b4cadf20f0dd</cbc:ID>
                                         <cbc:Description>Your Answer</cbc:Description>
                                         <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                         <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">INDICATOR</cbc:ValueDataTypeCode>
@@ -2709,7 +2710,7 @@
                         </cac:TenderingCriterionPropertyGroup>
                 </cac:SubTenderingCriterion>
                 <cac:Legislation>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">c119e0b4-f643-46b9-a827-0a5919cd8fb8</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">b1dc73cb-a3d8-40f7-928c-1b975ba904fc</cbc:ID>
                         <cbc:Title>[Legislation title]</cbc:Title>
                         <cbc:Description>[Legislation description]</cbc:Description>
                         <cbc:JurisdictionLevel>EU</cbc:JurisdictionLevel>
@@ -2720,60 +2721,59 @@
                         </cac:Language>
                 </cac:Legislation>
                 <cac:TenderingCriterionPropertyGroup>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">b01d8f8f-ceac-4b47-b7aa-88cdeb630465</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">a53561d5-6614-4dbe-987e-b96f35387f46</cbc:ID>
                         <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ON*</cbc:PropertyGroupTypeCode>
                         <cac:TenderingCriterionProperty>
-                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">6837d8ab-7048-4308-aad1-db94da855983</cbc:ID>
-                                <cbc:Description>Register Type</cbc:Description>
-                                <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">REQUIREMENT</cbc:TypeCode>
-                                <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">CODE</cbc:ValueDataTypeCode>
-                                <!-- No answer is expected
-				here from the economic operator, as this is a REQUIREMENT issued by the contracting
-				authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
-				the requirement issued by the contracting authority -->
-                                <cbc:ExpectedCode listID="PleaseSelectTheCorrectOne" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">[Register Type Code]</cbc:ExpectedCode>
-                        </cac:TenderingCriterionProperty>
-                        <cac:TenderingCriterionProperty>
-                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">343dc1bc-5a8a-467b-8a15-f0ab66d7207a</cbc:ID>
-                                <cbc:Description>Other Register</cbc:Description>
+                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">d0128bbb-1195-4c12-b8a4-0efc07f5a027</cbc:ID>
+                                <cbc:Description>Register name</cbc:Description>
                                 <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">REQUIREMENT</cbc:TypeCode>
                                 <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">DESCRIPTION</cbc:ValueDataTypeCode>
                                 <!-- No answer is expected
 				here from the economic operator, as this is a REQUIREMENT issued by the contracting
 				authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
 				the requirement issued by the contracting authority -->
-                                <cbc:ExpectedDescription>[Other Register Type]</cbc:ExpectedDescription>
+                                <cbc:ExpectedDescription>[Register Name]</cbc:ExpectedDescription>
+                        </cac:TenderingCriterionProperty>
+                        <cac:TenderingCriterionProperty>
+                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">645367ea-f0e0-45b8-a2d2-bb3e7a012258</cbc:ID>
+                                <cbc:Description>URL</cbc:Description>
+                                <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">REQUIREMENT</cbc:TypeCode>
+                                <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">URL</cbc:ValueDataTypeCode>
+                                <!-- No answer is expected
+				here from the economic operator, as this is a REQUIREMENT issued by the contracting
+				authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+				the requirement issued by the contracting authority -->
                         </cac:TenderingCriterionProperty>
                         <cac:SubsidiaryTenderingCriterionPropertyGroup>
-                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">0e50931d-4d39-4f1d-9fdc-b2cf16c0807a</cbc:ID>
+                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">0e50931d-4d39-4f1d-9fdc-b2cf16c0807a</cbc:ID>
                                 <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ON*</cbc:PropertyGroupTypeCode>
                                 <cac:TenderingCriterionProperty>
-                                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">8f9e81d5-1ff2-4ab5-878f-a523d058c5d0</cbc:ID>
+                                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">2a3e7f1a-6056-4826-8461-f45037ce04bd</cbc:ID>
                                         <cbc:Description>Does the EO fulfil the criteria by itself?</cbc:Description>
                                         <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                         <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">INDICATOR</cbc:ValueDataTypeCode>
                                 </cac:TenderingCriterionProperty>
                                 <cac:SubsidiaryTenderingCriterionPropertyGroup>
-                                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">fe557ed0-2387-478f-a9be-d0f3457c088e</cbc:ID>
+                                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">fe557ed0-2387-478f-a9be-d0f3457c088e</cbc:ID>
                                         <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ONFALSE</cbc:PropertyGroupTypeCode>
                                         <cac:TenderingCriterionProperty>
-                                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">ec5dcce4-a4ab-48ed-9b5d-242a5f2c2e61</cbc:ID>
+                                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">1ed1c159-32af-424a-a90f-0a47cc9012bc</cbc:ID>
                                                 <cbc:Description>In the case of no – Relied upon or not</cbc:Description>
                                                 <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                 <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">INDICATOR</cbc:ValueDataTypeCode>
                                         </cac:TenderingCriterionProperty>
                                 </cac:SubsidiaryTenderingCriterionPropertyGroup>
                                 <cac:SubsidiaryTenderingCriterionPropertyGroup>
-                                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e296a1cc-83d3-48ac-b4e4-7e7d0ae0af25</cbc:ID>
+                                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e296a1cc-83d3-48ac-b4e4-7e7d0ae0af25</cbc:ID>
                                         <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ONTRUE</cbc:PropertyGroupTypeCode>
                                         <cac:TenderingCriterionProperty>
-                                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">067c7833-fb5f-4a2f-b0c2-88832bbe191e</cbc:ID>
+                                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">b56f7166-6b41-42c8-9f02-b62146350e62</cbc:ID>
                                                 <cbc:Description>Name of the entity</cbc:Description>
                                                 <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                 <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">DESCRIPTION</cbc:ValueDataTypeCode>
                                         </cac:TenderingCriterionProperty>
                                         <cac:TenderingCriterionProperty>
-                                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">fde588e7-7d72-451c-a8a9-7b671edb6f89</cbc:ID>
+                                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">f54e28d2-4898-44ac-8d88-91fd97851677</cbc:ID>
                                                 <cbc:Description>ID of the entity</cbc:Description>
                                                 <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                 <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ECONOMIC_OPERATOR_IDENTIFIER</cbc:ValueDataTypeCode>
@@ -2781,48 +2781,48 @@
                                 </cac:SubsidiaryTenderingCriterionPropertyGroup>
                         </cac:SubsidiaryTenderingCriterionPropertyGroup>
                         <cac:SubsidiaryTenderingCriterionPropertyGroup>
-                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">6cce6b8e-c53d-4598-8150-ac49aba3b9c7</cbc:ID>
+                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">6cce6b8e-c53d-4598-8150-ac49aba3b9c7</cbc:ID>
                                 <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ON*</cbc:PropertyGroupTypeCode>
                                 <cac:TenderingCriterionProperty>
-                                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">a383e7d6-2ae5-497a-b109-f9ae9b868a6f</cbc:ID>
+                                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">4b63e838-e30f-4cf7-8d30-19ac2c61b521</cbc:ID>
                                         <cbc:Description>Your Answer</cbc:Description>
                                         <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                         <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">INDICATOR</cbc:ValueDataTypeCode>
                                 </cac:TenderingCriterionProperty>
                                 <cac:SubsidiaryTenderingCriterionPropertyGroup>
-                                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">70d5bbcf-0581-4d0f-b5c7-8b604a791972</cbc:ID>
+                                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">70d5bbcf-0581-4d0f-b5c7-8b604a791972</cbc:ID>
                                         <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ONTRUE</cbc:PropertyGroupTypeCode>
                                         <cac:TenderingCriterionProperty>
-                                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">7f77dc91-dc24-4b2f-b561-e6d6c68f5035</cbc:ID>
+                                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">3af703a9-9fb3-44b8-8ab9-dfb20e89181a</cbc:ID>
                                                 <cbc:Description>Registration number</cbc:Description>
                                                 <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                 <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">DESCRIPTION</cbc:ValueDataTypeCode>
                                         </cac:TenderingCriterionProperty>
                                 </cac:SubsidiaryTenderingCriterionPropertyGroup>
                                 <cac:SubsidiaryTenderingCriterionPropertyGroup>
-                                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">3a4a5421-81cc-468e-b69f-b86bf8c7932d</cbc:ID>
+                                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">3a4a5421-81cc-468e-b69f-b86bf8c7932d</cbc:ID>
                                         <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ONFALSE</cbc:PropertyGroupTypeCode>
                                         <cac:TenderingCriterionProperty>
-                                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">1e3fc7a4-6211-4585-9052-2697b0ec7a5f</cbc:ID>
+                                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">56e9da39-b9b5-4c29-aa8c-19aaa313a75b</cbc:ID>
                                                 <cbc:Description>Reasons why your are not registered</cbc:Description>
                                                 <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                 <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">DESCRIPTION</cbc:ValueDataTypeCode>
                                         </cac:TenderingCriterionProperty>
                                 </cac:SubsidiaryTenderingCriterionPropertyGroup>
                                 <cac:SubsidiaryTenderingCriterionPropertyGroup>
-                                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">7458d42a-e581-4640-9283-34ceb3ad4345</cbc:ID>
+                                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">7458d42a-e581-4640-9283-34ceb3ad4345</cbc:ID>
                                         <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ON*</cbc:PropertyGroupTypeCode>
                                         <cac:TenderingCriterionProperty>
-                                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">5070dcd7-9753-4035-9e62-27320797e93f</cbc:ID>
+                                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">c81df37f-faaf-425a-8fa6-ddc312d5f04e</cbc:ID>
                                                 <cbc:Description>Is this information available electronically?</cbc:Description>
                                                 <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                 <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">INDICATOR</cbc:ValueDataTypeCode>
                                         </cac:TenderingCriterionProperty>
                                         <cac:SubsidiaryTenderingCriterionPropertyGroup>
-                                                <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">41dd2e9b-1bfd-44c7-93ee-56bd74a4334b</cbc:ID>
+                                                <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">41dd2e9b-1bfd-44c7-93ee-56bd74a4334b</cbc:ID>
                                                 <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ONTRUE</cbc:PropertyGroupTypeCode>
                                                 <cac:TenderingCriterionProperty>
-                                                  <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">b1ac5e18-d5bf-49fc-b21a-e995c0069545</cbc:ID>
+                                                  <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">605d82a5-a076-4fff-ad33-1e423843e135</cbc:ID>
                                                   <cbc:Description>Evidence Supplied</cbc:Description>
                                                   <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                   <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">EVIDENCE_IDENTIFIER</cbc:ValueDataTypeCode>
@@ -2839,9 +2839,10 @@
                 <cbc:Name>For service contracts: authorisation of particular organisation needed</cbc:Name>
                 <cbc:Description>Is a particular authorisation of a particular organisation needed in order to be able to perform the service in question in the country of establishment of the economic operator?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -3010,9 +3011,10 @@
                 <cbc:Name>For service contracts: membership of particular organisation needed</cbc:Name>
                 <cbc:Description>Is a particular membership of a particular organisation needed in order to be able to perform the service in question in the country of establishment of the economic operator?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -3181,9 +3183,10 @@
                 <cbc:Name>General yearly turnover</cbc:Name>
                 <cbc:Description>Its general yearly turnover for the number of financial years required in the relevant notice, the in the ESPD, the relevant notice or the ESPD is as follows:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -3342,9 +3345,10 @@
                 <cbc:Name>Average yearly turnover</cbc:Name>
                 <cbc:Description>Its average yearly turnover for the number of years required in the relevant notice, the procurement documents or the ESPD is as follows:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -3514,9 +3518,10 @@
                 <cbc:Name>Specific average turnover</cbc:Name>
                 <cbc:Description>Its specific average yearly turnover in the business area covered by the contract for the number of years required in the relevant notice, the in the ESPD, the relevant notice or or the ESPD is as follows:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -3697,9 +3702,10 @@
                 <cbc:Name>Specific yearly turnover</cbc:Name>
                 <cbc:Description>Its specific yearly turnover in the business area covered by the contract for the number of financial years required in the relevant notice, the in the ESPD, the relevant notice or or the ESPD is as follows:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -3880,9 +3886,10 @@
                 <cbc:Name>Financial ratio</cbc:Name>
                 <cbc:Description>Concerning the financial ratios specified in the relevant notice, the in the ESPD, the relevant notice or or the ESPD, the economic operator declares that the actual values for the required ratios are as follows:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:Legislation>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">387118be-f732-49f2-982a-5bdb4d9e52ff</cbc:ID>
@@ -4024,9 +4031,10 @@
                 <cbc:Name>Professional risk indemnity insurance</cbc:Name>
                 <cbc:Description>The insured amount in its professional risk indemnity insurance is the following:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -4172,9 +4180,10 @@
                 <cbc:Name>Other economic or financial requirements</cbc:Name>
                 <cbc:Description>Concerning the other economic or financial requirements, if any, that may have been specified in the relevant notice or in the ESPD, the economic operator declares that:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -4348,9 +4357,10 @@
                 <cbc:Name>For works contracts: performance of works of the specified type</cbc:Name>
                 <cbc:Description>For public works contracts only: During the reference period, the economic operator has performed the following works of the specified type. Contracting authorities may require up to five years and allow experience dating from more than five years.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -4530,9 +4540,10 @@
                 <cbc:Name>For supply contracts: performance of deliveries of the specified type</cbc:Name>
                 <cbc:Description>For public supply contracts only: During the reference period, the economic operator has delivered the following principal deliveries of the type specified. Contracting authorities may require up to three years and allow experience dating from more than three years.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -4712,9 +4723,10 @@
                 <cbc:Name>For service contracts: performance of services of the specified type</cbc:Name>
                 <cbc:Description>For public service contracts only: During the reference period, the economic operator has provided the following main services of the type specified. Contracting authorities may require up to three years and allow experience dating from more than three years.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -4894,9 +4906,10 @@
                 <cbc:Name>Technicians or technical bodies for quality control</cbc:Name>
                 <cbc:Description>It can call upon the following technicians or technical bodies, especially those responsible for quality control. For technicians or technical bodies not belonging directly to the economic operator's undertaking but on whose capacities the economic operator relies as set out under Part II, Section C, separate ESPD forms must be filled in.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -5121,9 +5134,10 @@
                 <cbc:Name>For works contracts: technicians or technical bodies to carry out the work</cbc:Name>
                 <cbc:Description>In the case of public works contracts, the economic operator will be able to call on the following technicians or technical bodies to carry out the work:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -5348,9 +5362,10 @@
                 <cbc:Name>Technical facilities and measures for ensuring quality</cbc:Name>
                 <cbc:Description>It uses the following technical facilities and measures for ensuring quality and its study and research facilities are as follows:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -5483,9 +5498,10 @@
                 <cbc:Name>Study and research facilities</cbc:Name>
                 <cbc:Description>It uses the following study and research facilities are as follows:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -5618,9 +5634,10 @@
                 <cbc:Name>Supply chain management</cbc:Name>
                 <cbc:Description>It will be able to apply the following supply chain management and tracking systems when performing the contract:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -5753,9 +5770,10 @@
                 <cbc:Name>Environmental management measures</cbc:Name>
                 <cbc:Description>The economic operator will be able to apply the following environmental management measures when performing the contract:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -5888,9 +5906,10 @@
                 <cbc:Name>Tools, plant or technical equipment</cbc:Name>
                 <cbc:Description>The following tools, plant or technical equipment will be available to it for performing the contract:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -6023,9 +6042,10 @@
                 <cbc:Name>Educational and professional qualifications</cbc:Name>
                 <cbc:Description>The following educational and professional qualifications are held by the service provider or the contractor itself, and/or (depending on the requirements set out in the relevant notice or the in the ESPD, the relevant notice or by its managerial staff.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -6216,9 +6236,10 @@
                 <cbc:Name>Special requierements check</cbc:Name>
                 <cbc:Description>For complex products or services to be supplied or, exceptionally, for products or services which are required for a special purpose: The economic operator will allow checks to be conducted on the production capacities or the technical capacity of the economic operator and, where necessary, on the means of study and research which are available to it and on the quality control measures? The check is to be performed by the contracting authority or, in case the latter consents to this, on its behalf by a competent official body of the country in which the supplier or service provider is established.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -6341,9 +6362,10 @@
                 <cbc:Name>Number of managerial staff</cbc:Name>
                 <cbc:Description>The economic operator’s number of managerial staff for the last three years were as follows:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -6483,9 +6505,10 @@
                 <cbc:Name>Average annual manpower</cbc:Name>
                 <cbc:Description>The economic operator’s average annual manpower for the last three years were as follows:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -6625,9 +6648,10 @@
                 <cbc:Name>Subcontracting proportion</cbc:Name>
                 <cbc:Description>The economic operator intends possibly to subcontract the following proportion (i.e. percentage) of the contract. Please note that if the economic operator has decided to subcontract a part of the contract and relies on the subcontractor’s capacities to perform that part, then please fill in a separate ESPD for such subcontractors, see Part II, Section C above.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -6735,9 +6759,10 @@
                 <cbc:Name>For supply contracts: samples, descriptions or photographs without certification of authenticity</cbc:Name>
                 <cbc:Description>For public supply contracts: The economic operator will supply the required samples, descriptions or photographs of the products to be supplied, which do not need to be accompanied by certifications of authenticity.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -6847,9 +6872,10 @@
                 <cbc:Name>For supply contracts: samples, descriptions or photographs with certification of authenticity</cbc:Name>
                 <cbc:Description>For public supply contracts: The economic operator will supply the required samples, descriptions or photographs of the products to be supplied and will provide certifications of authenticity where applicable.</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -6959,9 +6985,10 @@
                 <cbc:Name>For supply contracts: certificates by quality control institutes</cbc:Name>
                 <cbc:Description>Can the economic operator provide the required certificates drawn up by official quality control institutes or agencies of recognised competence attesting the conformity of products clearly identified by references to the technical specifications or standards, which are set out in the relevant notice or the in the ESPD, the relevant notice or ?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -7094,9 +7121,10 @@
                 <cbc:Name>Certificates by independent bodies about quality assurance standards</cbc:Name>
                 <cbc:Description>Will the economic operator be able to produce certificates drawn up by independent bodies attesting that the economic operator complies with the required quality assurance standards, including accessibility for disabled persons?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -7229,9 +7257,10 @@
                 <cbc:Name>Certificates by independent bodies about environmental management systems or standards</cbc:Name>
                 <cbc:Description>Will the economic operator be able to produce certificates drawn up by independent bodies attesting that the economic operator complies with the required environmental management systems or standards?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:SubTenderingCriterion>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">e6b21867-95b5-4549-8180-f4673219b179</cbc:ID>
@@ -7364,9 +7393,10 @@
                 <cbc:Name>Economic operator is a sheltered workshop</cbc:Name>
                 <cbc:Description>Only in case the procurement is reserved: is the economic operator a sheltered workshop, a 'social business' or will it provide for the performance of the contract in the context of sheltered employment programmes?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:TenderingCriterionPropertyGroup>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">6febbe4a-e715-427c-a2b1-19cfabadaef0</cbc:ID>
@@ -7422,9 +7452,10 @@
                 <cbc:Name>Economic operator registered in a pre qualification system</cbc:Name>
                 <cbc:Description>If applicable, is the economic operator registered on an official list of approved economic operators or does it have an equivalent certificate (e.g. under a national (pre)qualification system)?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:TenderingCriterionPropertyGroup>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">ecb5127b-9018-4fb8-8327-a6a7a2c73195</cbc:ID>
@@ -7506,9 +7537,10 @@
                 <cbc:Name>Economic Operator together with others</cbc:Name>
                 <cbc:Description>Is the economic operator participating in the procurement procedure together with others?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:TenderingCriterionPropertyGroup>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">d939f2c6-ba25-4dc4-889c-11d1853add19</cbc:ID>
@@ -7570,9 +7602,10 @@
                 <cbc:Name>Relied on entities</cbc:Name>
                 <cbc:Description>Does the economic operator rely on the capacities of other entities in order to meet the selection criteria set out under Part IV and the criteria and rules (if any) set out under Part V below?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:TenderingCriterionPropertyGroup>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">289f39b3-2a15-421a-8050-a29858031f35</cbc:ID>
@@ -7628,9 +7661,10 @@
                 <cbc:Name>Not relied on entities</cbc:Name>
                 <cbc:Description>Does the economic operator intend to subcontract any share of the contract to third parties?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:TenderingCriterionPropertyGroup>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">289f39b3-2a15-421a-8050-a29858031f35</cbc:ID>
@@ -7686,9 +7720,10 @@
                 <cbc:Name>Reduction of the number of qualified candidates</cbc:Name>
                 <cbc:Description>The economic operator declares that It meets the objective and non discriminatory criteria or rules to be applied in order to limit the number of candidates in the following way:</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:TenderingCriterionPropertyGroup>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">ecc69670-f428-4446-908f-689568ca0d0d</cbc:ID>
@@ -7738,9 +7773,10 @@
                 <cbc:Name>Economic Operator Micro, Small or Medium-sized Enterprise</cbc:Name>
                 <cbc:Description>Is the economic operator a Micro, a Small or Medium-sized Enterprise?</cbc:Description>
                 <cac:ProcurementProjectLotReference>
-                        <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">
-			LOT-00000
-		</cbc:ID>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00000</cbc:ID>
+                </cac:ProcurementProjectLotReference>
+                <cac:ProcurementProjectLotReference>
+                        <cbc:ID schemeID="Criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">LOT-00001</cbc:ID>
                 </cac:ProcurementProjectLotReference>
                 <cac:TenderingCriterionPropertyGroup>
                         <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">0aef9d77-7bcd-411e-b49e-f6b6cd47312c</cbc:ID>

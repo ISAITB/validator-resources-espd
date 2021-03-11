@@ -468,7 +468,8 @@
    </xsl:template>
 
 	  <!--RULE -->
-<xsl:template match="cac:TenderingCriterionProperty/cbc:ExpectedCode" priority="1000"
+<xsl:template match="cac:TenderingCriterionPropertyGroup[cbc:ID='b01d8f8f-ceac-4b47-b7aa-88cdeb630465']/cac:TenderingCriterionProperty/cbc:ExpectedCode"
+                 priority="1000"
                  mode="M0">
 
 		<!--ASSERT -->
