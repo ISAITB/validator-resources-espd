@@ -196,7 +196,7 @@
 <xsl:template match="cac:EconomicOperatorParty/cac:EconomicOperatorRole/cbc:RoleCode"
                  priority="1000"
                  mode="M3">
-      <xsl:variable name="gc" select="document('../../gc/eo-role-type.gc')//SimpleCodeList"/>
+      <xsl:variable name="gc" select="document('../gc/eo-role-type.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
