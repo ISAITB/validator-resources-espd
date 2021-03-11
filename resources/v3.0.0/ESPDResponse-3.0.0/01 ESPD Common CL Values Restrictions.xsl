@@ -190,13 +190,182 @@
 <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">Common Code lists Values Restrictions</svrl:text>
 
    <!--PATTERN BR-COM-CL-RESTR-->
+<xsl:variable name="extended"
+                 select="if (upper-case(/*[1]/cbc:QualificationApplicationTypeCode) = 'EXTENDED' or upper-case(/*[1]/cbc:QualificationApplicationTypeCode) = 'SELFCONTAINED') then 'EXTENDED' else 'BASIC'"/>
 
+	  <!--RULE -->
+<xsl:template match="cbc:ValueDataTypeCode" priority="1007" mode="M3">
+      <xsl:variable name="gc"
+                    select="document('../gc/ResponseDataType.gc')//SimpleCodeList"/>
+      <xsl:variable name="currentValue" select="."/>
 
-	<!--RULE -->
-<xsl:template match="cac:EconomicOperatorParty/cac:EconomicOperatorRole/cbc:RoleCode"
-                 priority="1000"
+		    <!--ASSERT -->
+<xsl:choose>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or                  (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
+               <xsl:attribute name="id">BR-COM-CL-RESTR-01.01</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>The context of the value '<xsl:text/>
+                  <xsl:value-of select="local-name()"/>
+                  <xsl:text/>=<xsl:text/>
+                  <xsl:value-of select="."/>
+                  <xsl:text/>' does not match the type of 'cbc:QualificationApplicationTypeCode'.</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+   </xsl:template>
+
+	  <!--RULE -->
+<xsl:template match="cbc:WeightingTypeCode" priority="1006" mode="M3">
+      <xsl:variable name="gc"
+                    select="document('../gc/WeightingType.gc')//SimpleCodeList"/>
+      <xsl:variable name="currentValue" select="."/>
+
+		    <!--ASSERT -->
+<xsl:choose>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or                  (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
+               <xsl:attribute name="id">BR-COM-CL-RESTR-01.02</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>The context of the value '<xsl:text/>
+                  <xsl:value-of select="local-name()"/>
+                  <xsl:text/>=<xsl:text/>
+                  <xsl:value-of select="."/>
+                  <xsl:text/>' does not match the type of 'cbc:QualificationApplicationTypeCode'.</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+   </xsl:template>
+
+	  <!--RULE -->
+<xsl:template match="cac:TenderingCriterion/cbc:EvaluationMethodTypeCode" priority="1005"
                  mode="M3">
-      <xsl:variable name="gc" select="document('../gc/eo-role-type.gc')//SimpleCodeList"/>
+      <xsl:variable name="gc"
+                    select="document('../gc/EvaluationMethodType.gc')//SimpleCodeList"/>
+      <xsl:variable name="currentValue" select="."/>
+
+		    <!--ASSERT -->
+<xsl:choose>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
+               <xsl:attribute name="id">BR-COM-CL-RESTR-01.03</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>The context of the value '<xsl:text/>
+                  <xsl:value-of select="local-name()"/>
+                  <xsl:text/>=<xsl:text/>
+                  <xsl:value-of select="."/>
+                  <xsl:text/>' does not match the type of 'cbc:QualificationApplicationTypeCode'.</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+   </xsl:template>
+
+	  <!--RULE -->
+<xsl:template match="cbc:CriterionTypeCode" priority="1004" mode="M3">
+      <xsl:variable name="gc"
+                    select="document('../gc/ESPD-CriteriaTaxonomy_V2.1.1.gc')//SimpleCodeList"/>
+      <xsl:variable name="currentValue" select="."/>
+
+		    <!--ASSERT -->
+<xsl:choose>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
+               <xsl:attribute name="id">BR-COM-CL-RESTR-01.04</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>The context of the value '<xsl:text/>
+                  <xsl:value-of select="local-name()"/>
+                  <xsl:text/>=<xsl:text/>
+                  <xsl:value-of select="."/>
+                  <xsl:text/>' does not match the type of 'cbc:QualificationApplicationTypeCode'.</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+   </xsl:template>
+
+	  <!--RULE -->
+<xsl:template match="cbc:BooleanGUIControlType" priority="1003" mode="M3">
+      <xsl:variable name="gc"
+                    select="document('../gc/BooleanGUIControlType.gc')//SimpleCodeList"/>
+      <xsl:variable name="currentValue" select="."/>
+
+		    <!--ASSERT -->
+<xsl:choose>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
+               <xsl:attribute name="id">BR-COM-CL-RESTR-01.05</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>The context of the value '<xsl:text/>
+                  <xsl:value-of select="local-name()"/>
+                  <xsl:text/>=<xsl:text/>
+                  <xsl:value-of select="."/>
+                  <xsl:text/>' does not match the type of 'cbc:QualificationApplicationTypeCode'.</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+   </xsl:template>
+
+	  <!--RULE -->
+<xsl:template match="cbc:CPVCodes" priority="1002" mode="M3">
+      <xsl:variable name="gc" select="document('../gc/CPVCodes.gc')//SimpleCodeList"/>
+      <xsl:variable name="currentValue" select="."/>
+
+		    <!--ASSERT -->
+<xsl:choose>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and contains($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'context']/SimpleValue, $extended)))">
+               <xsl:attribute name="id">BR-COM-CL-RESTR-01.06</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>The context of the value '<xsl:text/>
+                  <xsl:value-of select="local-name()"/>
+                  <xsl:text/>=<xsl:text/>
+                  <xsl:value-of select="."/>
+                  <xsl:text/>' does not match the type of 'cbc:QualificationApplicationTypeCode'.</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+   </xsl:template>
+
+	  <!--RULE -->
+<xsl:template match="cac:EconomicOperatorParty/cac:EconomicOperatorRole/cbc:RoleCode"
+                 priority="1001"
+                 mode="M3">
+      <xsl:variable name="gc" select="document('../gc/EORoleType.gc')//SimpleCodeList"/>
       <xsl:variable name="currentValue" select="."/>
 
 		    <!--ASSERT -->
@@ -206,6 +375,34 @@
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                                 test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and ($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'status']/SimpleValue = 'ACTIVE')))">
                <xsl:attribute name="id">BR-COM-CL-RESTR-02.01</xsl:attribute>
+               <xsl:attribute name="flag">warning</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>The status of the value '<xsl:text/>
+                  <xsl:value-of select="local-name()"/>
+                  <xsl:text/>=<xsl:text/>
+                  <xsl:value-of select="."/>
+                  <xsl:text/>' is deprecated, instead, use a code in this same code list with the status='ACTIVE'.</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+   </xsl:template>
+
+	  <!--RULE -->
+<xsl:template match="cbc:QualificationApplicationTypeCode" priority="1000" mode="M3">
+      <xsl:variable name="gc"
+                    select="document('../gc/QualificationApplicationType.gc')//SimpleCodeList"/>
+      <xsl:variable name="currentValue" select="."/>
+
+		    <!--ASSERT -->
+<xsl:choose>
+         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and ($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'status']/SimpleValue = 'ACTIVE')))"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and ($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'status']/SimpleValue = 'ACTIVE')))">
+               <xsl:attribute name="id">BR-COM-CL-RESTR-02.02</xsl:attribute>
                <xsl:attribute name="flag">warning</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
