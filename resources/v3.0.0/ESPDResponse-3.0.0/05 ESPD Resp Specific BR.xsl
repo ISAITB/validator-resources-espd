@@ -202,8 +202,7 @@
 
 
 	<!--RULE -->
-<xsl:template match="cac:TenderingCriterionResponse/cac:ResponseValue" priority="1000"
-                 mode="M7">
+<xsl:template match="QualificationApplicationResponse" priority="1000" mode="M7">
       <xsl:variable name="ppLot" select="/*[1]/cac:ProcurementProjectLot/cbc:ID"/>
 
 		    <!--ASSERT -->
