@@ -190,37 +190,7 @@
 <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">Common Code lists Values Restrictions</svrl:text>
 
    <!--PATTERN BR-COM-CL-RESTR-->
-
-
-	<!--RULE -->
-<xsl:template match="cac:EconomicOperatorParty/cac:EconomicOperatorRole/cbc:RoleCode"
-                 priority="1000"
-                 mode="M3">
-      <xsl:variable name="gc" select="document('../gc/eo-role-type.gc')//SimpleCodeList"/>
-      <xsl:variable name="currentValue" select="."/>
-
-		    <!--ASSERT -->
-<xsl:choose>
-         <xsl:when test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]))                  or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and ($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'status']/SimpleValue = 'ACTIVE')))"/>
-         <xsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(not(exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue])) or (exists($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]) and ($gc/Row[Value[@ColumnRef = 'code']/SimpleValue = $currentValue]/Value[@ColumnRef = 'status']/SimpleValue = 'ACTIVE')))">
-               <xsl:attribute name="id">BR-COM-CL-RESTR-02.01</xsl:attribute>
-               <xsl:attribute name="flag">warning</xsl:attribute>
-               <xsl:attribute name="location">
-                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
-               </xsl:attribute>
-               <svrl:text>The status of the value '<xsl:text/>
-                  <xsl:value-of select="local-name()"/>
-                  <xsl:text/>=<xsl:text/>
-                  <xsl:value-of select="."/>
-                  <xsl:text/>' is deprecated, instead, use a code in this same code list with the status='ACTIVE'.</svrl:text>
-            </svrl:failed-assert>
-         </xsl:otherwise>
-      </xsl:choose>
-      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
-   </xsl:template>
-   <xsl:template match="text()" priority="-1" mode="M3"/>
+<xsl:template match="text()" priority="-1" mode="M3"/>
    <xsl:template match="@*|node()" priority="-2" mode="M3">
       <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
    </xsl:template>

@@ -225,26 +225,31 @@
 
 	  <!--RULE -->
 <xsl:template match="espd:QualificationApplicationRequest" priority="1000" mode="M7">
-      <xsl:variable name="URLCriterionList" select="./xls/criterionList.xml"/>
-      <xsl:variable name="docCriterionList" select="document($URLCriterionList)"/>
-      <xsl:variable name="currentSelection"
-                    select="cac:TenderingCriterion[contains(cbc:CriterionTypeCode, $docCriterionList//selection-criterion/name)]"/>
-      <xsl:variable name="allLots" select="/*[1]/cac:ProcurementProjectLotReference/cbc:ID"/>
+      <xsl:variable name="exclusionList"
+                    select="translate('&#127;crime-org&#127;&#127;corruption&#127;&#127;fraud&#127;&#127;terr-offence&#127;&#127;finan-laund&#127;&#127;human-traffic&#127;&#127;tax-pay&#127;&#127;socsec-pay&#127;&#127;envir-law&#127;&#127;socsec-law&#127;&#127;labour-law&#127;&#127;bankruptcy&#127;&#127;insolvency&#127;&#127;cred-arran&#127;&#127;bankr-nat&#127;&#127;liq-admin&#127;&#127;susp-act&#127;&#127;prof-misconduct&#127;&#127;distorsion&#127;&#127;partic-confl&#127;&#127;prep-confl&#127;&#127;sanction&#127;&#127;misinterpr&#127;&#127;nati-ground&#127;','ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')"/>
+      <xsl:variable name="selectionList"
+                    select="translate('&#127;prof-regist&#127;&#127;trade-regist&#127;&#127;autorisation&#127;&#127;membership&#127;&#127;gen-year-to&#127;&#127;aver-year-to&#127;&#127;spec-aver-to&#127;&#127;spec-year-to&#127;&#127;finan-rat&#127;&#127;indem-insu&#127;&#127;finan-requ&#127;&#127;work-perform&#127;&#127;supply-perform&#127;&#127;service-perform&#127;&#127;qual-cont-tech&#127;&#127;work-tech&#127;&#127;qual-facil&#127;&#127;research-fac&#127;&#127;chain-manage&#127;&#127;qualification&#127;&#127;envir-measure&#127;&#127;tech-equip&#127;&#127;spec-req-check&#127;&#127;manage-staff&#127;&#127;year-manpower&#127;&#127;suncont-port&#127;&#127;wo-autent&#127;&#127;w-autent&#127;&#127;qa-certif-inst&#127;&#127;qu-certif-indep&#127;&#127;envir-certif-indep&#127;','ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')"/>
+      <xsl:variable name="isCurrentAExclusion"
+                    select="cac:TenderingCriterion[contains($exclusionList,concat('&#127;',translate(cbc:CriterionTypeCode,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'&#127;'))]"/>
+      <xsl:variable name="isCurrentASelection"
+                    select="cac:TenderingCriterion[contains($selectionList,concat('&#127;',translate(cbc:CriterionTypeCode,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'&#127;'))]"/>
+      <xsl:variable name="allLots"
+                    select="/*[1]/cac:TenderingCriterion/cac:ProcurementProjectLotReference/cbc:ID"/>
       <xsl:variable name="testLots" select="count($allLots) &gt; 0"/>
-      <xsl:variable name="lotsIDs" select="/*[1]/cac:ProcurementProjectLotReference/cbc:ID"/>
 
 		    <!--ASSERT fatal-->
 <xsl:choose>
-         <xsl:when test="not($testLots) or ($testLots and count($lotsIDs) = 1)"/>
+         <xsl:when test="not($testLots)"/>
          <xsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="not($testLots) or ($testLots and count($lotsIDs) = 1)">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not($testLots)">
                <xsl:attribute name="id">BR-LOT-40</xsl:attribute>
                <xsl:attribute name="role">fatal</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
                </xsl:attribute>
-               <svrl:text>The lots each criteria applies to MUST be provided.</svrl:text>
+               <svrl:text>Lots apply only to Selection Criteria. Exclusion Criteria <xsl:text/>
+                  <xsl:value-of select="$isCurrentAExclusion"/>
+                  <xsl:text/> cannot have Lot associated.</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>

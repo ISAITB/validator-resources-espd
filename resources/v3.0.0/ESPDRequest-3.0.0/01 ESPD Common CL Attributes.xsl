@@ -454,10 +454,10 @@
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(false() or not(@listAgencyID != 'EU-COM-GROW'))"/>
+         <xsl:when test="(false() or not(@listAgencyID != 'EU-COM-OP'))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(false() or not(@listAgencyID != 'EU-COM-GROW'))">
+                                test="(false() or not(@listAgencyID != 'EU-COM-OP'))">
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
@@ -468,7 +468,7 @@
                   <xsl:value-of select="name(ancestor::*[1])"/>
                   <xsl:text/>/<xsl:text/>
                   <xsl:value-of select="name()"/>
-                  <xsl:text/>' must have the following attribute and value: 'listAgencyID = EU-COM-GROW'.</svrl:text>
+                  <xsl:text/>' must have the following attribute and value: 'listAgencyID = EU-COM-OP'.</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
