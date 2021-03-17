@@ -232,9 +232,9 @@
 
 		    <!--ASSERT fatal-->
 <xsl:choose>
-         <xsl:when test="not($allLots)"/>
+         <xsl:when test="not($testLots)"/>
          <xsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not($allLots)">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not($testLots)">
                <xsl:attribute name="id">BR-LOT-40</xsl:attribute>
                <xsl:attribute name="role">fatal</xsl:attribute>
                <xsl:attribute name="location">
@@ -256,9 +256,9 @@
 
 		    <!--ASSERT fatal-->
 <xsl:choose>
-         <xsl:when test="$allLots"/>
+         <xsl:when test="$testLots"/>
          <xsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="$allLots">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="$testLots">
                <xsl:attribute name="id">BR-LOT-41</xsl:attribute>
                <xsl:attribute name="role">fatal</xsl:attribute>
                <xsl:attribute name="location">
