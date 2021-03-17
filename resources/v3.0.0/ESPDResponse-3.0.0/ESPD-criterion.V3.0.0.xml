@@ -883,7 +883,8 @@
                                                   <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                   <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">DESCRIPTION</cbc:ValueDataTypeCode>
                                                   </cac:TenderingCriterionProperty>
-                                                  <cac:SubsidiaryTenderingCriterionPropertyGroup>
+                                                </cac:SubsidiaryTenderingCriterionPropertyGroup>
+                                                <cac:SubsidiaryTenderingCriterionPropertyGroup>
                                                   <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">fc57e473-d63e-4a04-b589-dcf81cab8052</cbc:ID>
                                                   <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ON*</cbc:PropertyGroupTypeCode>
                                                   <cac:TenderingCriterionProperty>
@@ -901,7 +902,6 @@
                                                   <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                   <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">DESCRIPTION</cbc:ValueDataTypeCode>
                                                   </cac:TenderingCriterionProperty>
-                                                  </cac:SubsidiaryTenderingCriterionPropertyGroup>
                                                   </cac:SubsidiaryTenderingCriterionPropertyGroup>
                                                 </cac:SubsidiaryTenderingCriterionPropertyGroup>
                                                 <cac:SubsidiaryTenderingCriterionPropertyGroup>
@@ -1061,7 +1061,8 @@
                                                   <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                   <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">DESCRIPTION</cbc:ValueDataTypeCode>
                                                   </cac:TenderingCriterionProperty>
-                                                  <cac:SubsidiaryTenderingCriterionPropertyGroup>
+                                                </cac:SubsidiaryTenderingCriterionPropertyGroup>
+                                                <cac:SubsidiaryTenderingCriterionPropertyGroup>
                                                   <cbc:ID schemeID="criterion" schemeAgencyID="EU-COM-GROW" schemeVersionID="3.0.0">fc57e473-d63e-4a04-b589-dcf81cab8052</cbc:ID>
                                                   <cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">ON*</cbc:PropertyGroupTypeCode>
                                                   <cac:TenderingCriterionProperty>
@@ -1079,7 +1080,6 @@
                                                   <cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">QUESTION</cbc:TypeCode>
                                                   <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="3.0.0">DESCRIPTION</cbc:ValueDataTypeCode>
                                                   </cac:TenderingCriterionProperty>
-                                                  </cac:SubsidiaryTenderingCriterionPropertyGroup>
                                                   </cac:SubsidiaryTenderingCriterionPropertyGroup>
                                                 </cac:SubsidiaryTenderingCriterionPropertyGroup>
                                                 <cac:SubsidiaryTenderingCriterionPropertyGroup>
