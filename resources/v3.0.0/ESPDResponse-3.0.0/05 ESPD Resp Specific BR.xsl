@@ -202,22 +202,20 @@
 
 
 	<!--RULE -->
-<xsl:template match="QualificationApplicationResponse" priority="1000" mode="M7">
-      <xsl:variable name="ppLot" select="/*[1]/cac:ProcurementProjectLot/cbc:ID"/>
+<xsl:template match="espd:QualificationApplicationResponse" priority="1000" mode="M7">
+      <xsl:variable name="ppLot" select="count(cac:ProcurementProjectLot/cbc:ID)"/>
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="cbc:ResponseID = $ppLot"/>
+         <xsl:when test="$ppLot = 1"/>
          <xsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:ResponseID = $ppLot">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="$ppLot = 1">
                <xsl:attribute name="id">BR-LOT-10</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
                </xsl:attribute>
-               <svrl:text>The lot the EO tenders for MUST be provided. The lot '<xsl:text/>
-                  <xsl:value-of select="cbc:ResponseID"/>
-                  <xsl:text/>' does not exist.</svrl:text>
+               <svrl:text>The lot the EO tenders for MUST be provided.</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>

@@ -203,7 +203,7 @@
 
 
 	<!--RULE -->
-<xsl:template match="espd:QualificationApplicationRequest" priority="1001" mode="M7">
+<xsl:template match="espd:QualificationApplicationRequest" priority="1002" mode="M7">
 
 		<!--ASSERT fatal-->
 <xsl:choose>
@@ -220,21 +220,21 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
+      <xsl:apply-templates select="*" mode="M7"/>
    </xsl:template>
 
 	  <!--RULE -->
-<xsl:template match="espd:QualificationApplicationRequest" priority="1000" mode="M7">
-      <xsl:variable name="allLots"
-                    select="/*[1]/cac:TenderingCriterion/cac:ProcurementProjectLotReference/cbc:ID"/>
+<xsl:template match="cac:TenderingCriterion[contains(translate('&#127;crime-org&#127;&#127;corruption&#127;&#127;fraud&#127;&#127;terr-offence&#127;&#127;finan-laund&#127;&#127;human-traffic&#127;&#127;tax-pay&#127;&#127;socsec-pay&#127;&#127;envir-law&#127;&#127;socsec-law&#127;&#127;labour-law&#127;&#127;bankruptcy&#127;&#127;insolvency&#127;&#127;cred-arran&#127;&#127;bankr-nat&#127;&#127;liq-admin&#127;&#127;susp-act&#127;&#127;prof-misconduct&#127;&#127;distorsion&#127;&#127;partic-confl&#127;&#127;prep-confl&#127;&#127;sanction&#127;&#127;misinterpr&#127;&#127;nati-ground&#127;','ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),concat('&#127;',translate(cbc:CriterionTypeCode,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'&#127;'))]"
+                 priority="1001"
+                 mode="M7">
+      <xsl:variable name="allLots" select="cac:ProcurementProjectLotReference/cbc:ID"/>
       <xsl:variable name="testLots" select="count($allLots) &gt; 0"/>
 
 		    <!--ASSERT fatal-->
 <xsl:choose>
-         <xsl:when test="(cac:TenderingCriterion/cac:ProcurementProjectLotReference/cbc:ID)"/>
+         <xsl:when test="not($allLots)"/>
          <xsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(cac:TenderingCriterion/cac:ProcurementProjectLotReference/cbc:ID)">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not($allLots)">
                <xsl:attribute name="id">BR-LOT-40</xsl:attribute>
                <xsl:attribute name="role">fatal</xsl:attribute>
                <xsl:attribute name="location">
@@ -244,10 +244,34 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
+      <xsl:apply-templates select="*" mode="M7"/>
+   </xsl:template>
+
+	  <!--RULE -->
+<xsl:template match="cac:TenderingCriterion[contains(translate('&#127;prof-regist&#127;&#127;trade-regist&#127;&#127;autorisation&#127;&#127;membership&#127;&#127;gen-year-to&#127;&#127;aver-year-to&#127;&#127;spec-aver-to&#127;&#127;spec-year-to&#127;&#127;finan-rat&#127;&#127;indem-insu&#127;&#127;finan-requ&#127;&#127;work-perform&#127;&#127;supply-perform&#127;&#127;service-perform&#127;&#127;qual-cont-tech&#127;&#127;work-tech&#127;&#127;qual-facil&#127;&#127;research-fac&#127;&#127;chain-manage&#127;&#127;qualification&#127;&#127;envir-measure&#127;&#127;tech-equip&#127;&#127;spec-req-check&#127;&#127;manage-staff&#127;&#127;year-manpower&#127;&#127;suncont-port&#127;&#127;wo-autent&#127;&#127;w-autent&#127;&#127;qa-certif-inst&#127;&#127;qu-certif-indep&#127;&#127;envir-certif-indep&#127;','ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),concat('&#127;',translate(cbc:CriterionTypeCode,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'&#127;'))]"
+                 priority="1000"
+                 mode="M7">
+      <xsl:variable name="allLots" select="cac:ProcurementProjectLotReference/cbc:ID"/>
+      <xsl:variable name="testLots" select="count($allLots) &gt; 0"/>
+
+		    <!--ASSERT fatal-->
+<xsl:choose>
+         <xsl:when test="$allLots"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="$allLots">
+               <xsl:attribute name="id">BR-LOT-41</xsl:attribute>
+               <xsl:attribute name="role">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>All Selection Criteria must have associated LOT.</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:apply-templates select="*" mode="M7"/>
    </xsl:template>
    <xsl:template match="text()" priority="-1" mode="M7"/>
    <xsl:template match="@*|node()" priority="-2" mode="M7">
-      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
+      <xsl:apply-templates select="*" mode="M7"/>
    </xsl:template>
 </xsl:stylesheet>
