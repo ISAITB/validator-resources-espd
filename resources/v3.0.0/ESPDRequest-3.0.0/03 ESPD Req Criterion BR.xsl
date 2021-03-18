@@ -207,7 +207,7 @@
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                                 test="cac:TenderingCriterion[cbc:CriterionTypeCode='crime-org'] and cac:TenderingCriterion[cbc:CriterionTypeCode='corruption'] and cac:TenderingCriterion[cbc:CriterionTypeCode='fraud'] and cac:TenderingCriterion[cbc:CriterionTypeCode='terr-offence'] and cac:TenderingCriterion[cbc:CriterionTypeCode='finan-laund'] and cac:TenderingCriterion[cbc:CriterionTypeCode='human-traffic'] and cac:TenderingCriterion[cbc:CriterionTypeCode='tax-pay'] and cac:TenderingCriterion[cbc:CriterionTypeCode='socsec-pay']">
                <xsl:attribute name="id">BR-REQ-30</xsl:attribute>
-               <xsl:attribute name="flag">warning</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
                </xsl:attribute>
