@@ -199,16 +199,13 @@
 
 	<!--RULE -->
 <xsl:template match="espd:QualificationApplicationRequest" priority="1000" mode="M5">
-      <xsl:variable name="URLCriterionList" select="./xls/criterionList.xml"/>
-      <xsl:variable name="docCriterionList" select="document($URLCriterionList)"/>
-      <xsl:variable name="isCurrentExclusionRequired"
-                    select="cac:TenderingCriterion[contains(cbc:CriterionTypeCode, $docCriterionList[@type='conviction']/name) or contains(cbc:CriterionTypeCode, $docCriterionList[@type='contributions']/name)]"/>
 
-		    <!--ASSERT -->
+		<!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="$isCurrentExclusionRequired"/>
+         <xsl:when test="cac:TenderingCriterion[cbc:CriterionTypeCode='crime-org']     and cac:TenderingCriterion[cbc:CriterionTypeCode='corruption']    and cac:TenderingCriterion[cbc:CriterionTypeCode='fraud']    and cac:TenderingCriterion[cbc:CriterionTypeCode='terr-offence']    and cac:TenderingCriterion[cbc:CriterionTypeCode='finan-laund']    and cac:TenderingCriterion[cbc:CriterionTypeCode='human-traffic']    and cac:TenderingCriterion[cbc:CriterionTypeCode='tax-pay']    and cac:TenderingCriterion[cbc:CriterionTypeCode='socsec-pay']"/>
          <xsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="$isCurrentExclusionRequired">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                                test="cac:TenderingCriterion[cbc:CriterionTypeCode='crime-org'] and cac:TenderingCriterion[cbc:CriterionTypeCode='corruption'] and cac:TenderingCriterion[cbc:CriterionTypeCode='fraud'] and cac:TenderingCriterion[cbc:CriterionTypeCode='terr-offence'] and cac:TenderingCriterion[cbc:CriterionTypeCode='finan-laund'] and cac:TenderingCriterion[cbc:CriterionTypeCode='human-traffic'] and cac:TenderingCriterion[cbc:CriterionTypeCode='tax-pay'] and cac:TenderingCriterion[cbc:CriterionTypeCode='socsec-pay']">
                <xsl:attribute name="id">BR-REQ-30</xsl:attribute>
                <xsl:attribute name="flag">warning</xsl:attribute>
                <xsl:attribute name="location">
@@ -219,7 +216,7 @@
          </xsl:otherwise>
       </xsl:choose>
       <xsl:variable name="current_Selection"
-                    select="cac:TenderingCriterion[contains(cbc:CriterionTypeCode, $docCriterionList//selection-criterion/name)]"/>
+                    select="cac:TenderingCriterion[contains(translate('&#127;prof-regist&#127;&#127;trade-regist&#127;&#127;autorisation&#127;&#127;membership&#127;&#127;gen-year-to&#127;&#127;aver-year-to&#127;&#127;spec-aver-to&#127;&#127;spec-year-to&#127;&#127;finan-rat&#127;&#127;indem-insu&#127;&#127;finan-requ&#127;&#127;work-perform&#127;&#127;supply-perform&#127;&#127;service-perform&#127;&#127;qual-cont-tech&#127;&#127;work-tech&#127;&#127;qual-facil&#127;&#127;research-fac&#127;&#127;chain-manage&#127;&#127;qualification&#127;&#127;envir-measure&#127;&#127;tech-equip&#127;&#127;spec-req-check&#127;&#127;manage-staff&#127;&#127;year-manpower&#127;&#127;suncont-port&#127;&#127;wo-autent&#127;&#127;w-autent&#127;&#127;qa-certif-inst&#127;&#127;qu-certif-indep&#127;&#127;envir-certif-indep&#127;','ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),concat('&#127;',translate(cbc:CriterionTypeCode,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'&#127;'))]"/>
 
 		    <!--ASSERT -->
 <xsl:choose>
