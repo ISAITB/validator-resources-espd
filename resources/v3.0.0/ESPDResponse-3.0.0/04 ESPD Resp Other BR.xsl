@@ -202,16 +202,16 @@
 
 		<!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="text()='urn:www.cenbii.eu:transaction:biitrdm092:ver3.0'"/>
+         <xsl:when test="text()='urn:www.cenbii.eu:transaction:biitrdm070:ver3.0'"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="text()='urn:www.cenbii.eu:transaction:biitrdm092:ver3.0'">
+                                test="text()='urn:www.cenbii.eu:transaction:biitrdm070:ver3.0'">
                <xsl:attribute name="id">BR-OTH-06-01</xsl:attribute>
                <xsl:attribute name="flag">error</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
                </xsl:attribute>
-               <svrl:text>For the ESPD customization of UBL ('/cbc:CustomizationID') we use the value urn:www.cenbii.eu:transaction:biitrdm092:ver3.0</svrl:text>
+               <svrl:text>For the ESPD customization of UBL ('/cbc:CustomizationID') we use the value urn:www.cenbii.eu:transaction:biitrdm070:ver3.0</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
