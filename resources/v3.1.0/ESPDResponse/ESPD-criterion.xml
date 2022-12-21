@@ -4765,6 +4765,21 @@
             </cac:TenderingCriterionProperty>
             <cac:TenderingCriterionProperty>
                 <cbc:ID schemeID="Criterion" schemeAgencyID="XXXESPD-SERVICEXXX"
+                    schemeVersionID="3.1.0">67ed10c1-099b-4406-b3ee-2d900ebe3fbf</cbc:ID>
+                <cbc:Description>Threshold per year</cbc:Description>
+                <cbc:TypeCode listID="CriterionElementType" listAgencyID="OP" listVersionID="3.1.0"
+                    >REQUIREMENT</cbc:TypeCode>
+                <cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="OP"
+                        listVersionID="3.1.0">CODE_BOOLEAN</cbc:ValueDataTypeCode>               
+                <!-- No answer is expected
+				here from the economic operator, as this is a REQUIREMENT issued by the contracting
+				authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+				the requirement issued by the contracting authority -->
+                <cbc:ExpectedCode listID="BooleanGUIControlType" listAgencyID="OP"
+                    listVersionID="3.1.0">CHECK_BOX_TRUE</cbc:ExpectedCode>
+            </cac:TenderingCriterionProperty>
+            <cac:TenderingCriterionProperty>
+                <cbc:ID schemeID="Criterion" schemeAgencyID="XXXESPD-SERVICEXXX"
                     schemeVersionID="3.1.0">e347a50b-262e-44d4-8b02-84e6f6cea8e4</cbc:ID>
                 <cbc:Description>Minimum requirement</cbc:Description>
                 <cbc:TypeCode listID="CriterionElementType" listAgencyID="OP" listVersionID="3.1.0"
