@@ -1113,7 +1113,7 @@
                   <xsl:value-of select="name(ancestor::*[1])"/>
                   <xsl:text/>/<xsl:text/>
                   <xsl:value-of select="name()"/>
-                  <xsl:text/>' must have the following attribute and value: 'listSchemeURI = https://github.com/ESPD/ESPD-EDM/tree/v3.1.1/codelists/gc/ResponseDataType.gc'.</svrl:text>
+                  <xsl:text/>' must have the following attribute and value: 'listSchemeURI = https://github.com/ESPD/ESPD-EDM/tree/v3.2.0/codelists/gc/ResponseDataType.gc'.</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
