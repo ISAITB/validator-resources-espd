@@ -988,10 +988,10 @@
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="(false() or not(@listID != 'property-group-type'))"/>
+         <xsl:when test="(false() or not(@listID != 'PropertyGroupType'))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(false() or not(@listID != 'property-group-type'))">
+                                test="(false() or not(@listID != 'PropertyGroupType'))">
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
@@ -1002,7 +1002,7 @@
                   <xsl:value-of select="name(ancestor::*[1])"/>
                   <xsl:text/>/<xsl:text/>
                   <xsl:value-of select="name()"/>
-                  <xsl:text/>' must have the following attribute and value: 'listID = property-group-type'.</svrl:text>
+                  <xsl:text/>' must have the following attribute and value: 'listID = PropertyGroupType'.</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
