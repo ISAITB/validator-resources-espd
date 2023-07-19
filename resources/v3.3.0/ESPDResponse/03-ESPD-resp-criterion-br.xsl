@@ -471,10 +471,10 @@
 
 		    <!--ASSERT -->
 <xsl:choose>
-         <xsl:when test="( ($currentDataType = 'PERCENTAGE') and (cac:ResponseValue/cbc:ResponseNumeric/@unitCode = 'PERCENTAGE') ) or not($currentDataType = 'PERCENTAGE')"/>
+         <xsl:when test="( ($currentDataType = 'PERCENTAGE') and (cac:ResponseValue/cbc:ResponseNumeric/@format = 'PERCENTAGE') ) or not($currentDataType = 'PERCENTAGE')"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="( ($currentDataType = 'PERCENTAGE') and (cac:ResponseValue/cbc:ResponseNumeric/@unitCode = 'PERCENTAGE') ) or not($currentDataType = 'PERCENTAGE')">
+                                test="( ($currentDataType = 'PERCENTAGE') and (cac:ResponseValue/cbc:ResponseNumeric/@format = 'PERCENTAGE') ) or not($currentDataType = 'PERCENTAGE')">
                <xsl:attribute name="id">BR-TCR-08-08</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
